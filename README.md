@@ -1,38 +1,49 @@
 # ☁ Cloudberry
 
-> A living workspace for humans, projects, tools, and AI agents.
+> **A living workspace where your projects keep making sense while you are away.**
 
-**CURRENT:** Newspaper · **STATUS:** Early / experimental
+Cloudberry is where people, projects, tools, and AI agents live in the same working environment.
 
-Your AI agents can work while you are away. Cloudberry makes sure their work still makes sense when you come back.
+You open it in the morning like a newspaper.
 
-It keeps projects understandable across chats, tools, models, and time—so you can see what happened, trust what is true, and continue from the right place.
+While you were away, a render finished.  
+An agent completed a research branch.  
+A build failed.  
+A server went offline.  
+A design changed.  
+Another agent finished a task and left the result for review.
 
-Open it in the morning like a newspaper for your projects.
+Cloudberry already knows where each of these things belongs.
 
-> **По-русски:** Cloudberry сохраняет историю и контекст работы людей и AI-агентов. Утром вы открываете свои проекты как газету: видите, что произошло, и сразу возвращаетесь к действию.
+> **По-русски:** Cloudberry — живое рабочее пространство для проектов, людей, инструментов и AI-агентов. Утром вы открываете его как газету: видите, что произошло за ночь, и сразу возвращаетесь именно в ту ветку работы, где нужно продолжить.
 
-## Open your projects like a newspaper
+---
+
+## Good morning
 
 ```text
-GOOD MORNING
-
 WHAT HAPPENED WHILE YOU WERE AWAY?
 
-Graph UI
-Code Engine v0.4 merged
-01:12
-
-Character Project
-Render completed
+CHARACTER
+Final render completed
 03:44
 
-Minecraft Server
+CLOUDBERRY
+Newspaper model updated
+04:12
+
+BCH
+Campaign assets exported
+05:03
+
+MINECRAFT
 Server went offline
-05:06
+05:41
 ```
 
-This is not a dashboard to monitor. It is a way back into the work.
+The Newspaper is not a dashboard to stare at.
+
+It is a way back into the work.
 
 ```text
 STORY
@@ -46,145 +57,302 @@ CONTEXT
 CONTINUE WORK
 ```
 
-A story tells you what changed. One step deeper shows where it belongs, what evidence supports it, and where to continue.
+A story tells you what changed.
 
-## The problem is continuity
+Open it and Cloudberry brings the relevant project into focus: the exact thread, nearby decisions, evidence, files, actions, and the place where work can continue.
 
-AI can already write code, research questions, render assets, watch services, and complete tasks. But the work falls apart between:
+No archaeological expedition through yesterday's chats.
+
+**The project remembers.**
+
+---
+
+## One workspace, many depths
+
+Cloudberry is not built around chat history.
+
+The workspace has structure.
 
 ```text
-Chats · Git · IDE · Terminal · Files · Tools · Agents · Human memory
+ALL PROJECTS
+     ↓
+PROJECT
+     ↓
+THREAD
+     ↓
+THREAD
+     ↓
+INFORMATION → ACTION → INFORMATION
+     ↓
+RAW / LOG
 ```
 
-After a few hours—or a few days—the difficult questions are no longer about generating more work:
+Zoom out and you see the state of all your projects.
 
-- What happened?
-- What is actually true?
-- Where does it belong?
-- Where do I continue?
+Zoom in and a project unfolds into meaningful lines of work.
 
-Cloudberry gives projects continuity. Activity becomes history; history becomes context; context leads back to action.
+Go deeper and a thread becomes tasks, files, images, references, decisions, tools, conversations, and results.
 
-## What Cloudberry is
+Deeper still are commands, logs, raw data, and execution details.
+
+The level of detail changes with your focus instead of forcing the entire project onto the screen at once.
+
+---
+
+## Work has shape
+
+Cloudberry does not force every part of work into the same generic SaaS card.
+
+A newspaper should feel like a newspaper.
+
+An archive should feel like memory.
+
+A control panel should feel like a control panel.
+
+A tool can have switches, buttons, mechanisms, sounds, materials, weight, and its own visual language.
+
+The interface is not decoration placed over data.
+
+**The way something looks and behaves helps tell you what kind of thing it is.**
+
+Important things feel important.  
+New work is easy to notice.  
+Old work fades into history instead of disappearing.  
+Actions react like actions.  
+Tools can become visually memorable places.
+
+This gives the workspace spatial and associative memory: you remember where work lives, not only what a menu item was called.
+
+---
+
+## The same project can become different views
+
+Cloudberry does not need a separate app for every way of looking at work.
+
+```text
+                    ONE PROJECT HISTORY
+                           │
+          ┌────────────────┼────────────────┐
+          ↓                ↓                ↓
+      NEWSPAPER          BOARD            GRAPH
+   what happened?    where is it?     how is it related?
+          │                │                │
+          └──────────────┬─┴────────────────┘
+                         ↓
+                       TABLE
+                 what is true now?
+                         ↓
+                       CHAT
+              continue this local thread
+```
+
+These are projections of the same work, not competing copies of it.
+
+The Newspaper answers **what happened**.
+
+The Board answers **where things are**.
+
+The Graph answers **how work is connected**.
+
+The Table answers **what state things are in**.
+
+Chat is one way to continue a specific thread. It is not the spine of the whole system.
+
+---
+
+## Humans, agents, and tools share the workspace
+
+AI agents are workers inside Cloudberry.
+
+They are not the product itself.
+
+One agent can research.  
+Another can write code.  
+Another can inspect a repository.  
+Another can render, test, monitor, summarize, or operate a tool.
+
+A project can survive switching from Claude to Codex, from an agent to a person, or from one tool to another.
+
+```text
+ROLE ≠ PERSON ≠ MODEL
+```
+
+A role is a stable responsibility.
+
+The performer can change.
+
+The project history remains.
+
+And when an agent says **DONE**, Cloudberry can keep that statement separate from the evidence produced by the work.
+
+```text
+FACT ≠ INTERPRETATION
+```
+
+You can move from a summary back to the source.
+
+---
+
+## History does not disappear
+
+Finished branches, abandoned directions, old decisions, and previous versions do not need to vanish.
+
+The active path stays clear.
+
+The past fades into the background and becomes history.
+
+Cloudberry behaves less like a task manager and more like **memory for an entire working environment**.
+
+The goal is continuity:
+
+```text
+“What happened?”
+        ↓
+“I understand.”
+        ↓
+“I know where it belongs.”
+        ↓
+“I can continue.”
+```
+
+---
+
+## Underneath the experience
+
+The visible workspace is built over recorded project activity.
 
 ```text
 HUMAN / AGENTS / TOOLS
           ↓
         ACTIVITY
           ↓
+        EVENTS
+          ↓
         JOURNAL
           ↓
- ┌────────┼────────┐
- ↓        ↓        ↓
-NEWS     MAP     STATE
+   ┌──────┼──────┐
+   ↓      ↓      ↓
+ NEWS    MAP    STATE
           ↓
        THREAD
           ↓
        ACTION
 ```
 
-The Journal preserves project activity. The Newspaper explains meaningful changes. The map locates them. Current state describes what the facts support. Threads keep each line of work addressable.
+The Journal preserves history.
 
-These are different views over one history, so a clearer interface does not need to create another version of the truth.
+Views are computed from that history instead of silently becoming new sources of truth.
 
-## Why this is different
+Threads are meaningful, nestable branches of work that can outlive any single chat, tool, or agent run.
 
-Cloudberry is not another chat UI, autonomous-agent framework, Jira clone, or dashboard full of status cards.
+---
 
-It is the place where work remains understandable over time.
+## What exists today
 
-- **Agents are workers inside the system, not the product itself.**
-- An agent saying “done” is a claim; product state needs observable evidence.
-- The human owns product direction and consequential decisions.
-- A project survives a change of chat, tool, person, or model.
-- Reading a summary should always lead back to context and action.
-
-```text
-ROLE ≠ PERSON ≠ MODEL
-```
-
-A stable role—coordinator, architect, researcher, implementer, news editor—can be performed by different people or models without erasing the history of the work.
-
-## What already works
-
-The complete Cloudberry product does not exist yet. Focused experiments have established a foundation.
+Cloudberry is still early. The full interface described above is the product direction; the foundation is being built and tested slice by slice.
 
 ### PROVEN
 
-- **Code Engine MVP:** the same implementation contract can be given to different agents and checked with shared verification rules.
-- **Computed Model Map:** navigation can be a projection instead of a duplicated source of truth.
-- **Live Journal path:** `activity → event → journal → reload → projection` passed Review 1 with **8/8 checks**.
-- **Event contract v1:** project, thread, run, origin, and thread parentage support the tested model while facts remain distinguishable from interpretations.
+- **Code Engine MVP** — the same implementation contract can be given to different agents and checked with shared verification rules.
+- **Computed Model Map** — navigation can be derived from canonical material instead of maintained as duplicated truth.
+- **Journal event contract v1** — real activity can flow through `event → journal → reload → projection`; Review 1 passed **8/8 live checks**.
+- **Gazeta projection v1** — project/thread tree, event sections, run state, unread state, FACT / INTERPRETATION, and ALL projection are frozen as a presentation-only contract.
 
 ### CURRENT
 
-**Newspaper** — turn journaled activity into a calm, trustworthy morning edition, then lead each story back to its project context.
+**Newspaper frontend** — turn the proven Gazeta projection into the first real Cloudberry experience.
 
-### LATER
+### NEXT
 
-- project and thread navigation;
-- the workspace from context to action;
+- project / thread navigation;
+- focus + context and semantic zoom;
+- workspace from context to action;
+- human evidence / approval;
 - multi-agent integration;
-- external development, creative, server, and automation tools.
+- external creative, development, server, and automation tools.
 
-See [Current proof](docs/current-proof.md) for the exact boundary between proven, experimental, and vision.
+For the exact evidence boundary, read [Current proof](docs/current-proof.md).
+
+---
 
 ## For AI agents
 
-If a user gave you this repository and asked you to understand Cloudberry, start here. This README contains the minimum project briefing; you do not need a separate introduction before discussing the project.
+If a user gave you only this repository, this README is enough to understand the project before asking for more context.
 
 ```text
 MISSION
-Preserve real project activity and turn it into
-addressable, trustworthy context for people and agents.
+Keep long-running projects understandable across
+people, agents, tools, chats, and time.
 
-CURRENT MILESTONE
-Newspaper.
+CURRENT PRODUCT SLICE
+Newspaper frontend.
 
 CORE MODEL
 PROJECT → THREAD → RUN → EVENT → JOURNAL → PROJECTION
 
-VISION
-A living workspace where many projects remain understandable
-while people, agents, and tools continue working over time.
+WORKSPACE MODEL
+INFORMATION → ACTION → INFORMATION
+
+UX DIRECTION
+Newspaper → Board / Graph / Table / Chat
+with focus + context and semantic zoom.
+
+PRINCIPLES
+- do not confuse vision with implemented behavior;
+- keep FACT and INTERPRETATION distinguishable;
+- prefer projections over duplicated truth;
+- preserve proven baselines;
+- human owns product decisions;
+- do not widen scope silently;
+- load the smallest relevant context first.
 ```
 
-### Working rules
+Need more depth?
 
-1. Do not confuse vision with implemented behavior.
-2. Keep facts and interpretations distinguishable.
-3. Prefer projections over duplicated sources of truth.
-4. The human owns product decisions.
-5. Do not widen implementation scope silently.
-6. Load context progressively: `MAP → AREA → LOCAL CONTEXT → TASK`.
-7. Do not casually rewrite proven baselines.
-
-Treat agent completion messages as claims that need evidence. Keep runs inside their thread unless a reviewed contract explicitly changes that rule. Preserve the distinction `ROLE ≠ PERSON ≠ MODEL`.
-
-### Need more context?
-
+- **Product vision:** [PRODUCT-VISION.md](PRODUCT-VISION.md)
+- **How it works:** [HOW-IT-WORKS.md](HOW-IT-WORKS.md)
 - **Evidence:** [docs/current-proof.md](docs/current-proof.md)
-- **Product:** [PRODUCT-VISION.md](PRODUCT-VISION.md)
-- **Model:** [HOW-IT-WORKS.md](HOW-IT-WORKS.md)
 - **Architecture:** [docs/architecture.md](docs/architecture.md)
 - **Roadmap:** [ROADMAP.md](ROADMAP.md)
-- **Expanded agent operating context:** [FOR-AI-AGENTS.md](FOR-AI-AGENTS.md)
+- **Expanded agent context:** [FOR-AI-AGENTS.md](FOR-AI-AGENTS.md)
 
-Choose the smallest document relevant to the task before loading more context.
+---
+
+## Why Cloudberry exists
+
+AI makes it possible to have more work happening in parallel.
+
+That also creates more places for context to disappear.
+
+Cloudberry is an attempt to make the opposite happen:
+
+**the more work your tools and agents do, the easier it should become to understand your projects — not harder.**
+
+Humans think.  
+Agents work.  
+Tools act.  
+History accumulates.
+
+And when you return, everything is still where it belongs.
+
+---
 
 ## Come argue with us
 
-Cloudberry is early enough that a sharp question or small experiment can change the product.
+Cloudberry is early enough that product ideas can still change its shape.
 
-We need people interested in:
+We are interested in people thinking about:
 
-- product and UX;
+- product and interaction design;
+- spatial / graph interfaces;
 - frontend;
 - agent workflows;
 - architecture;
-- integrations;
+- creative-tool integrations;
 - experiments that turn assumptions into evidence.
 
-If this sounds useful, send this repository to your agent, let it inspect the idea, and then come argue with us about how it should work.
+If the idea is interesting, send this repository to your own AI agent and ask it to inspect the project.
 
-Start with [Contributing](CONTRIBUTING.md), or open an issue with the problem you see, why it matters, and what would change.
+Then come argue with us about how this should work.
+
+See [CONTRIBUTING.md](CONTRIBUTING.md).
