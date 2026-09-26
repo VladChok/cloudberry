@@ -1,24 +1,18 @@
-# Cloudberry
+# ☁ Cloudberry
 
-> **RU:** Cloudberry — это рабочее пространство, где проекты сохраняют историю и контекст, а люди и AI-агенты могут продолжать работу с того места, где она остановилась. Первый интерфейс — утренняя газета: что произошло, почему это важно и куда перейти, чтобы действовать дальше.
+> A living workspace for humans, projects, tools, and AI agents.
 
-## Your projects should still make sense in the morning
+**CURRENT:** Newspaper · **STATUS:** Early / experimental
 
-AI agents can write code, research a question, render an asset, or watch a server. The hard part begins after the work: activity is scattered across chats, terminals, files, Git, tools, agents, and human memory.
+Your AI agents can work while you are away. Cloudberry makes sure their work still makes sense when you come back.
 
-After a few hours—or a few days—it becomes difficult to answer simple questions:
+It keeps projects understandable across chats, tools, models, and time—so you can see what happened, trust what is true, and continue from the right place.
 
-- What actually happened?
-- What was completed, and what was only suggested?
-- Who or what did the work?
-- Which project and line of work did it belong to?
-- Where can a person review it and continue?
+Open it in the morning like a newspaper for your projects.
 
-Cloudberry is a workspace between people, projects, tools, and AI agents. It turns fragmented activity into a durable project history, then presents that history as useful views.
+> **По-русски:** Cloudberry сохраняет историю и контекст работы людей и AI-агентов. Утром вы открываете свои проекты как газету: видите, что произошло, и сразу возвращаетесь к действию.
 
-## Start with the Newspaper
-
-The first Cloudberry experience is a morning newspaper for your own projects:
+## Open your projects like a newspaper
 
 ```text
 GOOD MORNING
@@ -33,86 +27,164 @@ Character Project
 Render completed
 03:44
 
-BCH
-New campaign assets exported
-04:18
-
 Minecraft Server
 Server went offline
 05:06
 ```
 
-Each story is an entrance back into the work:
+This is not a dashboard to monitor. It is a way back into the work.
 
 ```text
-READ → OPEN → PROJECT / THREAD → CONTEXT → CONTINUE WORK
+STORY
+  ↓
+PROJECT
+  ↓
+THREAD
+  ↓
+CONTEXT
+  ↓
+CONTINUE WORK
 ```
 
-The Newspaper is not the source of truth. It is one projection of recorded activity, designed for reading before acting.
+A story tells you what changed. One step deeper shows where it belongs, what evidence supports it, and where to continue.
 
-## One history, several useful views
+## The problem is continuity
+
+AI can already write code, research questions, render assets, watch services, and complete tasks. But the work falls apart between:
+
+```text
+Chats · Git · IDE · Terminal · Files · Tools · Agents · Human memory
+```
+
+After a few hours—or a few days—the difficult questions are no longer about generating more work:
+
+- What happened?
+- What is actually true?
+- Where does it belong?
+- Where do I continue?
+
+Cloudberry gives projects continuity. Activity becomes history; history becomes context; context leads back to action.
+
+## What Cloudberry is
 
 ```text
 HUMAN / AGENTS / TOOLS
           ↓
-        EVENTS
+        ACTIVITY
           ↓
         JOURNAL
           ↓
-   ┌──────┼───────────┐
-   ↓      ↓           ↓
-NEWS   MODEL MAP   CURRENT STATE
-   └──────┴─────┬─────┘
-                ↓
-        PROJECT / THREAD
-                ↓
-         CONTINUE WORK
+ ┌────────┼────────┐
+ ↓        ↓        ↓
+NEWS     MAP     STATE
+          ↓
+       THREAD
+          ↓
+       ACTION
 ```
 
-The Journal records what happened. The Newspaper, map, and current state are replaceable views computed from that history. Projects contain threads: meaningful branches of work that may be nested and may outlive any single agent run.
+The Journal preserves project activity. The Newspaper explains meaningful changes. The map locates them. Current state describes what the facts support. Threads keep each line of work addressable.
 
-Read [How it works](HOW-IT-WORKS.md) for the concepts without database-level detail.
+These are different views over one history, so a clearer interface does not need to create another version of the truth.
 
-## Why this is not another agent framework
+## Why this is different
 
-Cloudberry is not primarily a system for making an agent more autonomous. It is the place where work remains understandable across people, agents, models, tools, and time.
+Cloudberry is not another chat UI, autonomous-agent framework, Jira clone, or dashboard full of status cards.
 
-- Agents are workers inside the system, not the product itself.
-- A model saying “done” is a claim; product state needs evidence.
-- Roles remain stable even when the person or model performing them changes.
-- Views are derived from one history instead of becoming competing sources of truth.
-- The human keeps product decisions and can move from a summary back to the exact working context.
+It is the place where work remains understandable over time.
 
-## What has been proven
+- **Agents are workers inside the system, not the product itself.**
+- An agent saying “done” is a claim; product state needs observable evidence.
+- The human owns product direction and consequential decisions.
+- A project survives a change of chat, tool, person, or model.
+- Reading a summary should always lead back to context and action.
 
-The full Cloudberry product does not exist yet. Focused experiments have established several foundations:
+```text
+ROLE ≠ PERSON ≠ MODEL
+```
 
-- **Code Engine MVP:** two different agents can receive the same implementation contract and be evaluated against one shared rule model.
-- **Model Map:** a navigational map can be a computed projection rather than a second source of truth.
-- **Journal Review 1:** a live `activity → event → journal → reload → projection` path passed all 8 checks.
-- **Event contract v1:** project, thread, run, origin, and thread parentage are sufficient to rebuild the tested structure while keeping facts separate from interpretations.
+A stable role—coordinator, architect, researcher, implementer, news editor—can be performed by different people or models without erasing the history of the work.
 
-The evidence boundary is documented in [Current proof](docs/current-proof.md).
+## What already works
 
-## What we are building now
+The complete Cloudberry product does not exist yet. Focused experiments have established a foundation.
 
-The current product slice is the **Newspaper**: turning journaled events into a calm, readable account of project activity and providing a route back into context and action.
+### PROVEN
 
-Later slices connect the Newspaper to thread navigation, a working context, multi-agent coordination, and external tools. See the intentionally short [Roadmap](ROADMAP.md).
+- **Code Engine MVP:** the same implementation contract can be given to different agents and checked with shared verification rules.
+- **Computed Model Map:** navigation can be a projection instead of a duplicated source of truth.
+- **Live Journal path:** `activity → event → journal → reload → projection` passed Review 1 with **8/8 checks**.
+- **Event contract v1:** project, thread, run, origin, and thread parentage support the tested model while facts remain distinguishable from interpretations.
 
-## Explore the project
+### CURRENT
 
-- [Product vision](PRODUCT-VISION.md) — the human experience Cloudberry is trying to create.
-- [How it works](HOW-IT-WORKS.md) — the small conceptual model behind it.
-- [Architecture](docs/architecture.md) — the principles that should survive implementation changes.
-- [Current proof](docs/current-proof.md) — what is proven, experimental, and still vision.
-- [For AI agents](FOR-AI-AGENTS.md) — the shortest reliable briefing for an agent joining the project.
-- [Contributing](CONTRIBUTING.md) — ways to help without ceremony.
+**Newspaper** — turn journaled activity into a calm, trustworthy morning edition, then lead each story back to its project context.
 
-## Join in
+### LATER
 
-Cloudberry is early enough that a good question can change the product. If the idea resonates, open an issue with the problem you see, the change you imagine, and why it would help. Product thinking, interaction design, architecture, frontend work, agent workflows, integrations, and small experiments are all welcome.
+- project and thread navigation;
+- the workspace from context to action;
+- multi-agent integration;
+- external development, creative, server, and automation tools.
 
-If you are bringing an AI agent, give it this instruction:
+See [Current proof](docs/current-proof.md) for the exact boundary between proven, experimental, and vision.
 
-> Read `FOR-AI-AGENTS.md` and the files it references. Then help us continue Cloudberry.
+## For AI agents
+
+If a user gave you this repository and asked you to understand Cloudberry, start here. This README contains the minimum project briefing; you do not need a separate introduction before discussing the project.
+
+```text
+MISSION
+Preserve real project activity and turn it into
+addressable, trustworthy context for people and agents.
+
+CURRENT MILESTONE
+Newspaper.
+
+CORE MODEL
+PROJECT → THREAD → RUN → EVENT → JOURNAL → PROJECTION
+
+VISION
+A living workspace where many projects remain understandable
+while people, agents, and tools continue working over time.
+```
+
+### Working rules
+
+1. Do not confuse vision with implemented behavior.
+2. Keep facts and interpretations distinguishable.
+3. Prefer projections over duplicated sources of truth.
+4. The human owns product decisions.
+5. Do not widen implementation scope silently.
+6. Load context progressively: `MAP → AREA → LOCAL CONTEXT → TASK`.
+7. Do not casually rewrite proven baselines.
+
+Treat agent completion messages as claims that need evidence. Keep runs inside their thread unless a reviewed contract explicitly changes that rule. Preserve the distinction `ROLE ≠ PERSON ≠ MODEL`.
+
+### Need more context?
+
+- **Evidence:** [docs/current-proof.md](docs/current-proof.md)
+- **Product:** [PRODUCT-VISION.md](PRODUCT-VISION.md)
+- **Model:** [HOW-IT-WORKS.md](HOW-IT-WORKS.md)
+- **Architecture:** [docs/architecture.md](docs/architecture.md)
+- **Roadmap:** [ROADMAP.md](ROADMAP.md)
+- **Expanded agent operating context:** [FOR-AI-AGENTS.md](FOR-AI-AGENTS.md)
+
+Choose the smallest document relevant to the task before loading more context.
+
+## Come argue with us
+
+Cloudberry is early enough that a sharp question or small experiment can change the product.
+
+We need people interested in:
+
+- product and UX;
+- frontend;
+- agent workflows;
+- architecture;
+- integrations;
+- experiments that turn assumptions into evidence.
+
+If this sounds useful, send this repository to your agent, let it inspect the idea, and then come argue with us about how it should work.
+
+Start with [Contributing](CONTRIBUTING.md), or open an issue with the problem you see, why it matters, and what would change.

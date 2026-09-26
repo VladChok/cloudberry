@@ -1,6 +1,6 @@
 # Briefing for AI Agents
 
-Use this file when joining Cloudberry with little or no prior context.
+The [README](README.md) contains the minimum project briefing for both people and AI agents. This document is the expanded operating context for agents that will actively work on Cloudberry.
 
 ## Mission
 
